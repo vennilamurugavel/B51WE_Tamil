@@ -1,0 +1,39 @@
+1)HTTP:
+    HTTP stands for Hypertext transfer Protocol. HTTP is common for web browser. It sends clients request to the server and get back with response.
+    HTTP1.1 and HTTP2  are HTTP only here 1.1 and 2 indicating versions.
+    comapre with HTTP1.1,  HTTP2 have some additional features.
+    HTTP1.1                                     HTTP2
+   A) a)first version of HTTP                     a)Recent version of HTTP
+      b)developed 1997 and still in usage.        b)developed in the year of 2015
+      c)It works on the textual format            c)It works on the binary protocol.
+
+   B) HTTP2 is much faster than HTTP1.1.
+   c)HTTP2 is having more efficiency to prioritizes the content  
+   D)Multiplexing: HTTP/2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource
+   but HTTP1.1 load one by one resource if any one have error to load then it wil block at the stage.HTTP/2 does this by splitting data into binary-code messages and numbering these messages so that the client knows which stream each binary message belongs to.
+   E)Server Push: usually server give response only for asked request this is not suite for modern webpage but HTTP2 "push" more additional information before client asks. 
+   F)Header Compressor: HTTP1.1 and HTTP2 has compression method but compare with HTTP1.1 , HTTP2 using more advance Compressor method called HPACK that eliminate repeated information from header Packets.
+
+   2)Write a blog about objects and its internal representation in Javascript
+   Objects: This is a one of the main data types in javascript and forms building blocks for modern javascript.object is collection of properties.
+   in primitive data type can store single value (depending on the values) but in objects can store multiple data types for ex.number,string..
+   objects represntated by "key:value" format. these key are variables or functions.
+   example:
+  a) Create a single object, using an object literal
+   let empdetails={
+    fullname:"vennila",
+    section:"productive section",
+    joinedyear:2000;
+   }
+
+   console.log(empdetails);
+
+   if need any one of the information we can use dot method and square brace method.
+   example i need to show only joined year 
+     console.log(empdetails.joinedyear);
+     console.log(empdetails["joinedyear]);
+b)Create a single object, with the keyword new
+const student = new Object();
+student.firstName = "vennila";
+student.lastName = "Gomathi";
+student.age = 25;
