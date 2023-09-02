@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <body>
+        <script>
+        var request=new XMLHttpRequest();
+        //console.log(request);
+        //open connection
+        request.open('GET','https://restcountries.com/v3.1/all');
+       //sending connection
+        request.send();
+        //page load
+        request.onload=function(){
+            var data=JSON.parse(request.response)
+            console.log(data);
+            for(var i=0;i<data.length;i++)
+        {
+        //console.log(data[i].area);
+        //console.log(data[88].area);
+        console.log(data[i].name.common);
+        }
+        }
+        
+
+    </script>
+    </body>
+</head>
