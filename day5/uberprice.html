@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Uber{
+            constructor(location,distance,speed,price,waitingcharge)
+            {
+                this.location=location;
+                this.distance=distance;
+                this.speed=speed;
+                this.price=price;
+                this.waitingcharge=waitingcharge;
+            }
+            getbill()
+            {
+                return(`you choosen ${this.location} location that is having ${this.distance}KM distance achieved speed to reach your destination is ${this.speed}KM/h
+              speed for this bill generated price is ${totalbill.getprice()} RS/-`)
+            }
+            getprice()
+            {
+                let price=(this.distance*this.price)+(5*this.waitingcharge)
+                return price;
+            }
+            setDistance(dist)
+            {
+                this.distance=dist;
+            }
+
+           
+        }
+        const totalbill=new Uber("chennai",100,70,30,3)
+        totalbill.setDistance(110);
+        console.log(totalbill.getbill());
+        console.log(totalbill.getprice());
+    
+    </script>
+</body>
+</html>
